@@ -13,7 +13,11 @@ class ClientRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        if ($this->path() == '/') {
+            return ture;
+        }   else {
+            return false;
+        }
     }
 
     /**
@@ -24,7 +28,11 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'role' => 'required',
+            'email' => 'required|email',
+            'age' => 'numeric',
+            'registered_at' => 'date|nullable',
         ];
     }
 }
