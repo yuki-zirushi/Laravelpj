@@ -6,12 +6,11 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $item = [
-            'txt' => 'テキスト',
-            'param' => $request->param
+        $data = [
+            'content' => '本文',
         ];
-        return view('index', $item);
+        return view('index', $data);
     }
 }
