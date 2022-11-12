@@ -10,11 +10,10 @@ class ClientRequest extends FormRequest
      * Determine if the user is authorized to make this request.
      *
      * @return bool
-     */
-    public function authorize()
+     */public function authorize()
     {
         if ($this->path() == '/') {
-            return ture;
+            return true;
         }   else {
             return false;
         }
@@ -24,8 +23,7 @@ class ClientRequest extends FormRequest
      * Get the validation rules that apply to the request.
      *
      * @return array
-     */
-    public function rules()
+     */public function rules()
     {
         return [
             'name' => 'required',
