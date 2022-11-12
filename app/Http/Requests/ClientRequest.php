@@ -45,4 +45,9 @@ class ClientRequest extends FormRequest
             'registered_at.date' => '日付の形式で入力してください'
         ];
     }
+
+    protected function getRedirectUrl()
+    {
+        return 'verror';
+    }
 }

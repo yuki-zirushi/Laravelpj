@@ -16,4 +16,9 @@ class TestController extends Controller
     {
         return view('index', ['txt' => '正しい入力です']);
     }
+
+    public function verror()
+    {
+        return view('verror');
+    }
 }
